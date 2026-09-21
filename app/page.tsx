@@ -11,10 +11,7 @@ export default function Home() {
       <ScrollStage
         hero={
           <>
-            <Background
-              src="/hero-animated-solizone.mp4"
-              placeholder="/default-placeholder.png"
-            />
+            <Background src="/hero.mp4" placeholder="/hero-poster.jpg" />
             <Newsletter />
             <Footer />
           </>
