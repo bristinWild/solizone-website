@@ -1,24 +1,18 @@
 import { Background } from "@/components/background";
 import { Footer } from "@/components/footer";
+import { HeroNav } from "@/components/hero-nav";
 import { Newsletter } from "@/components/newsletter";
-import { Products } from "@/components/product";
-import { ScrollStage } from "@/components/scroll-stage";
-
+import { HERO_VIDEO, HERO_PLACEHOLDER } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <ScrollStage
-        hero={
-          <>
-            <Background src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4" placeholder="/alt-placeholder.png" />
-            <Newsletter />
-            <Footer />
-          </>
-        }
-      >
-        <Products />
-      </ScrollStage>
+    <main className="h-[100dvh] w-full p-inset">
+      <div className="relative h-full w-full">
+        <Background src={HERO_VIDEO} placeholder={HERO_PLACEHOLDER} />
+        <Newsletter />
+        <HeroNav />
+        <Footer />
+      </div>
     </main>
   );
 }
