@@ -6,7 +6,7 @@ import { HERO_VIDEO, HERO_PLACEHOLDER } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <main className="h-[100dvh] w-full p-inset">
+    <main className="solizone-landing h-[100dvh] w-full p-inset">
       <div className="relative h-full w-full">
         <Background src={HERO_VIDEO} placeholder={HERO_PLACEHOLDER} />
         <Newsletter />

@@ -41,6 +41,14 @@
     --inset: min(2vw, 1.5rem);
     --sides: 1rem;
     --footer-safe-area: calc(var(--inset) * 2 + 1.5rem + theme('spacing.9'));
+
+    /* Square corners on the landing page only */
+    .solizone-landing,
+    .solizone-landing *,
+    .solizone-landing *::before,
+    .solizone-landing *::after {
+      border-radius: 0 !important;
+    }
   }
 }
 
@@ -55,9 +63,11 @@
     transform: translateX(-100%);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(200%);
     opacity: 0;
@@ -68,6 +78,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
