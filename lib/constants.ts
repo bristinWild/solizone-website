@@ -5,7 +5,7 @@ export const TABLES = {
 export const socialLinks = {
   instagram: "https://www.instagram.com/joyco.studio",
   x: "https://x.com/borah_bristin",
-  github: "https://github.com/evice-labs/solizone/tree/main",
+  github: "https://github.com/bristinWild/solizone-website",
 };
 
 export const HERO_VIDEO =

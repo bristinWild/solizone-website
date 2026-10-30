@@ -28,11 +28,11 @@ export const AboutContent = () => (
         <Stage title="Solizone EVM" status="Execution layer">
             Run Solidity on a Logos zone. Contracts execute on Solizone, and every block is published to Logos for ordering, data availability, and finality.
         </Stage>
-        <Stage title="Zoner" status="Developer framework">
-            Write, test, and deploy in one workflow. A framework for building Solidity on Solizone, in the spirit of Foundry and Hardhat.
+        <Stage title="Zoner" status="Foundry companion">
+            Foundry's workflow, pointed at Solizone. Start a node, deploy with forge, and check publication from one command-line tool.
         </Stage>
         <Stage title="Solicamp" status="Basecamp app">
-            Deploy straight from Logos Basecamp, with no separate toolchain to set up. Built on Solizone EVM and Zoner.
+            Remix for Logos. Write, compile, deploy and test Solidity inside Basecamp, then publish to Bedrock when you choose. Built on Solizone EVM.
         </Stage>
     </div>
 );
@@ -42,11 +42,11 @@ export const RoadmapContent = () => (
         <Stage title="01 · Solizone EVM" status="Prototype live">
             Solidity executes on Solizone and blocks are published to Logos, where they reach finality.
         </Stage>
-        <Stage title="02 · Zoner" status="Next">
-            Compile contracts, run tests, and ship to a Logos zone from one toolchain.
+        <Stage title="02 · Zoner" status="Prototype live">
+            Foundry's workflow, pointed at Solizone, from one command-line tool.
         </Stage>
-        <Stage title="03 · Solicamp" status="Coming soon">
-            Write and deploy Solidity to Solizone directly inside Logos Basecamp.
+        <Stage title="03 · Solicamp" status="In progress">
+            Write, deploy and test Solidity inside Logos Basecamp. Catalog release is underway.
         </Stage>
     </div>
 );

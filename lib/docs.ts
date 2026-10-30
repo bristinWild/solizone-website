@@ -7,8 +7,7 @@ import { createSlugger } from "./slug";
  * A chapter's content lives in content/docs/<product>/<chapter>.md,
  * written with `##` for topics (these become sidebar links) and `###` for sub-points.
  *
- * To add Zoner later: create content/docs/zoner/*.md, list the chapters below,
- * and flip its status to "live".
+ * To add a chapter: create content/docs/<product>/<chapter>.md and list it below.
  */
 
 export type Chapter = { slug: string; title: string; summary: string };
@@ -34,11 +33,15 @@ export const PRODUCTS: Product[] = [
             { slug: "state-persistence", title: "State persistence", summary: "Checkpoints and snapshots: how EVM state survives a restart." },
             { slug: "hybrid-storage", title: "Logos Storage and hybrid history", summary: "Keeping recent blocks local, archiving old history to Logos Storage, and verifying what comes back." },
             { slug: "node-runtime", title: "The node runtime", summary: "The long-running node: its loop, what survives a stop, and how it recovers." },
+            { slug: "json-rpc", title: "Talking to Solizone EVM", summary: "The Ethereum JSON-RPC surface, the Solizone extensions, and how Foundry, viem and ethers connect." },
             { slug: "publication", title: "Publishing to Logos", summary: "How canonical blocks reach the Logos blockchain, and why publication is not storage." },
+            { slug: "syncing", title: "Everything published can be read back", summary: "Rebuilding a chain from Logos and verifying every block by replay." },
+            { slug: "embedding", title: "Embedding the node", summary: "Running Solizone EVM inside another Rust program, the way Solicamp does." },
             { slug: "architecture", title: "Architecture and trade-offs", summary: "Why the layers are split this way, what it does and does not buy, and how it compares." },
+            { slug: "research-notes", title: "Notes for researchers", summary: "Validity model, finality, sequencing, privacy and the open questions." },
             { slug: "design-principles", title: "Design principles", summary: "The boundaries that keep execution independent of infrastructure." },
             { slug: "status", title: "Where it stands today", summary: "What works now, what does not yet, and how it got here." },
-            { slug: "next-phase", title: "The next phase", summary: "Opening Solizone EVM to Ethereum tooling, and the hardening that comes after." },
+            { slug: "next-phase", title: "The next phase", summary: "Proving it on a live network, then hardening it." },
             { slug: "get-started", title: "Get started", summary: "Run Solizone EVM locally." },
             { slug: "wrap-up", title: "Wrap-up", summary: "The whole talk in one sentence, one analogy and one diagram." },
         ],
@@ -46,16 +49,32 @@ export const PRODUCTS: Product[] = [
     {
         slug: "zoner",
         name: "Zoner",
-        tagline: "Developer framework for Solidity on Solizone.",
-        status: "soon",
-        chapters: [],
+        tagline: "The command-line companion to Foundry for Solizone EVM.",
+        status: "live",
+        chapters: [
+            { slug: "introduction", title: "Introduction", summary: "What Zoner is and why Solidity developers get a familiar workflow." },
+            { slug: "install-and-commands", title: "Install and commands", summary: "Install Zoner and learn the commands." },
+            { slug: "workflow", title: "A typical workflow", summary: "From a fresh project to a published contract." },
+            { slug: "design", title: "How Zoner is built", summary: "Why it wraps Foundry instead of replacing it." },
+            { slug: "status", title: "Where it stands today", summary: "What works and what is next." },
+        ],
     },
     {
         slug: "solicamp",
         name: "Solicamp",
-        tagline: "Deploy Solidity straight from Logos Basecamp.",
-        status: "soon",
-        chapters: [],
+        tagline: "Remix for Logos: write, deploy and test Solidity inside Basecamp.",
+        status: "live",
+        chapters: [
+            { slug: "introduction", title: "Introduction", summary: "What Solicamp is and how its two packages fit together." },
+            { slug: "using-solicamp", title: "Using Solicamp", summary: "The layout, the panels and a typical session." },
+            { slug: "rooms-and-files", title: "Rooms and files", summary: "Separate local chains, and a safe per-room workspace." },
+            { slug: "compiler", title: "The compiler", summary: "A pinned, verified solc and what a compile returns." },
+            { slug: "collaboration", title: "Shared rooms", summary: "Hosts, guests and sealed traffic over Logos Messaging." },
+            { slug: "publishing", title: "Publish to Bedrock", summary: "Opt-in publishing, states and fees." },
+            { slug: "module-interface", title: "The core module", summary: "The solizone_module methods and source map." },
+            { slug: "build-and-install", title: "Build and install", summary: "Build with Nix and install in Basecamp." },
+            { slug: "status", title: "Where it stands today", summary: "What works, what is in progress." },
+        ],
     },
 ];
 

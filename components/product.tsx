@@ -24,18 +24,18 @@ const PRODUCTS: Product[] = [
     },
     {
         name: "Zoner",
-        role: "Developer framework",
-        status: "soon",
-        summary: "Write, test, and deploy in one workflow.",
-        body: "A framework for building Solidity on Solizone, in the spirit of Foundry and Hardhat. Compile contracts, run tests, and ship to a Logos zone from one toolchain.",
+        role: "Foundry companion",
+        status: "live",
+        summary: "Foundry's workflow, pointed at Solizone.",
+        body: "A command-line companion to Foundry. Start a local Solizone node, deploy with forge, and check publication to Logos, all from one tool.",
     },
     {
         name: "Solicamp",
         role: "Basecamp app",
-        status: "soon",
-        summary: "Deploy straight from Logos Basecamp.",
-        body: "Write and deploy Solidity to Solizone directly inside Logos Basecamp, with no separate toolchain to set up.",
-        builtOn: "Built on Solizone EVM and Zoner",
+        status: "live",
+        summary: "Remix for Logos, inside Basecamp.",
+        body: "Write, compile, deploy and test Solidity inside Logos Basecamp, share rooms with teammates, and publish to Bedrock when you choose.",
+        builtOn: "Built on Solizone EVM",
     },
 ];
 
